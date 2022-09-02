@@ -149,7 +149,7 @@ const processing = (foundProduct)=>{
               <p class="truncate" title = "${title}">${title}</p>
               <div class="card-actions justify-between items-center pt-3">
                 <h2 class="text-pink-600 font-semibold text-xl">$<span class="price">${price}</span> </h2>
-                <label onclick= "display('${title.replace(/[']/g, '')}', '${image}', '${description.replace(/[']/g, '')}','${rating.rate}')" for="my-modal-3" class="modal-button py-1 px-4 bg-pink-600 rounded text-slate-100 hover:cursor-pointer">view details</label>
+                <label onclick= "display('${title.replace(/[']/g, '')}', '${image}', '${description.replace(/[']/g, '')}','${rating.rate}')" for="my-modal-6" class="modal-button py-1 px-4 bg-pink-600 rounded text-slate-100 hover:cursor-pointer">view details</label>
               </div>
             </div>
             
@@ -165,13 +165,14 @@ const display = (title,image,description,rating)=>{
 
     const container = document.getElementById('detail-container')
     container.innerHTML = `
-        <div class="modal-box relative">
-            <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        
+            <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
             <img src="${image}" class="h-52 object-contain p-5" alt="Shoes" />
             <h3 class="text-lg font-bold">${title}</h3>
             <p class="text-pink-600 font-bold">Ratings: <span class="text-orange-500">${rating} <sup><i class="fa-solid fa-star text-[10px]"></i></sup><span></p>
             <p class="py-4">${description}</p>
-        </div>
+            
+        
       `
      
 }

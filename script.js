@@ -30,7 +30,7 @@ const showAll = async() =>{
 
     const menuContainer = document.getElementById("categories")
     menuContainer.innerHTML = `
-            <kbd class="kbd hover:cursor-pointer mx-3" onclick="displayAll()">all</kbd>`
+            <kbd class="kbd hover:cursor-pointer mx-3 bg-gray-100" onclick="displayAll()">all</kbd>`
     
     const uniqueArray = []
     data.forEach(product =>{

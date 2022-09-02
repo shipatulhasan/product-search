@@ -139,7 +139,7 @@ const processing = (foundProduct)=>{
             } = product
 
             const div = document.createElement('div')
-            div.className = 'card w-full bg-base-100 shadow-xl'
+            div.className = 'card w-full bg-whtie shadow-xl'
             div.innerHTML =   `
             
             <img src="${image}" class="h-52 object-contain p-5" alt="Shoes" />

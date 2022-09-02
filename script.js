@@ -38,7 +38,7 @@ const showAll = async() =>{
         if(uniqueArray.includes(product.category) === false){
             uniqueArray.push(product.category)
 
-            const tabItem = document.createElement('li')
+            const tabItem = document.createElement('kbd')
             
             tabItem.setAttribute('onclick','searchTab(event)')
             tabItem.classList.add('kbd','mx-3','hover:cursor-pointer')

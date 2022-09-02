@@ -166,7 +166,7 @@ const display = (title,image,description,rating)=>{
     const container = document.getElementById('detail-container')
     container.innerHTML = `
         
-            <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <label for="modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
             <img src="${image}" class="h-52 object-contain p-5" alt="Shoes" />
             <h3 class="text-lg font-bold">${title}</h3>
             <p class="text-pink-600 font-bold">Ratings: <span class="text-orange-500">${rating} <sup><i class="fa-solid fa-star text-[10px]"></i></sup><span></p>

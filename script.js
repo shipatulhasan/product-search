@@ -41,7 +41,7 @@ const showAll = async() =>{
             const tabItem = document.createElement('kbd')
             
             tabItem.setAttribute('onclick','searchTab(event)')
-            tabItem.classList.add('kbd','mx-3','hover:cursor-pointer','bg-transparent')
+            tabItem.classList.add('kbd','mx-3','hover:cursor-pointer','bg-gray-100')
             tabItem.innerText = product.category
             menuContainer.appendChild(tabItem)
             

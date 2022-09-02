@@ -149,7 +149,7 @@ const processing = (foundProduct)=>{
               <p class="truncate" title = "${title}">${title}</p>
               <div class="card-actions justify-between items-center pt-3">
                 <h2 class="text-pink-600 font-semibold text-xl">$<span class="price">${price}</span> </h2>
-                <label onclick= "display('${title.replace(/[']/g, '')}', '${image}', '${description.replace(/[']/g, '')}','${rating.rate}')" for="my-modal-3" class="modal-button py-1 px-4 bg-pink-600 rounded text-slate-100 hover:cursor-pointer">view details</label>
+                <label onclick= "display('${title.replace(/[']/g, '')}', '${image}', '${description.replace(/[']/g, '')}','${rating.rate}')" for="modal-3" class="modal-button py-1 px-4 bg-pink-600 rounded text-slate-100 hover:cursor-pointer">view details</label>
               </div>
             </div>
             

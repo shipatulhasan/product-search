@@ -1,3 +1,20 @@
+// spiner function
+
+const spinner = (isTrue)=>{
+
+    const progress = document.getElementById('spinner')
+    if(isTrue){
+        progress.classList.remove('hidden')
+    }
+    else{
+        progress.classList.add('hidden')
+
+    }
+
+}
+
+// laodProduct
+
 const loadProducts = async ()=>{
 
     const res = await fetch("https://fakestoreapi.com/products")
@@ -6,10 +23,14 @@ const loadProducts = async ()=>{
 
 }
 
-const menuContainer = document.getElementById("categories")
 const showAll = async() =>{
-    
+
     const data = await (loadProducts())
+    spinner(false)
+
+    const menuContainer = document.getElementById("categories")
+    menuContainer.innerHTML = `
+            <li class="kbd hover:cursor-pointer mx-3" onclick="displayAll()">all</li>`
     
     const uniqueArray = []
     data.forEach(product =>{
@@ -18,6 +39,7 @@ const showAll = async() =>{
             uniqueArray.push(product.category)
 
             const tabItem = document.createElement('li')
+            
             tabItem.setAttribute('onclick','searchTab(event)')
             tabItem.classList.add('kbd','mx-3','hover:cursor-pointer')
             tabItem.innerText = product.category
@@ -35,6 +57,7 @@ const showAll = async() =>{
         })
     })
 }
+spinner(true)
 showAll()
 
 
@@ -67,8 +90,7 @@ const displayAll= ()=>{
 // search by tab
 
 const searchTab = (e)=>{
-    const tab = e.target
-    tab.classList.add('bg-pink-600','text-white')
+    
     const fieldText = e.target.innerText
     searchData(fieldText,true)
 
@@ -83,7 +105,7 @@ const searchField = document.getElementById('search-field')
 
     const searchValue = searchField.value
     if(event.key ==='Enter'){
-        
+        document.querySelectorAll('.kbd').forEach(btn=>btn.classList.remove('bg-pink-600','text-white'))
        searchData(searchValue,false)
         
     }
@@ -152,20 +174,4 @@ const display = (title,image,description,rating)=>{
         </div>
       `
      
-}
-
-
-// spiner function
-
-const spinner = (isTrue)=>{
-
-    const progress = document.getElementById('spinner')
-    if(isTrue){
-        progress.classList.remove('hidden')
-    }
-    else{
-        progress.classList.add('hidden')
-
-    }
-
 }
